@@ -1,0 +1,49 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[
+    a4paper,
+    BCOR=6mm,
+    DIV=calc,
+    bibliography=totocnumbered,
+    bibliography=openstyle,
+    listof=leveldown
+]{scrartcl}
+
+\usepackage{inc/packages}
+\usepackage{inc/misc}
+\usepackage{inc/minted_conf}
+\usepackage{inc/extra_commands}
+\usepackage{inc/extra_units}
+\usepackage{inc/embedsources}
+
+%TODO: titre, sous-titre et auteur
+% /!\ frenchbsetup (et une partie de babel ?) par encore pris en compte ici
+\newcommand{\thedate}{\today}
+\newcommand{\thetitle}{TP3 -- HMM}
+\newcommand{\theauthor}{Loïc Damien, Anthony Groccia}
+
+
+\begin{document}
+
+
+\maketitle
+
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%\listoflistings
+%\input{acro}
+
+\section{Pour s'échauffer}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{diagramme_pieces.pdf}
+	\caption{}
+	\label{fig:diagramme_peices}
+\end{figure}
+
+%\printbibliography
+\appendix
+
+
+\end{document}

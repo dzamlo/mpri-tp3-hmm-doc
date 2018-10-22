@@ -1,0 +1,28 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{inc/misc}
+
+\frenchbsetup{ThinColonSpace=true}
+\SetupFloatingEnvironment{listing}{listname=Table des listings}
+\addbibresource{bib.bib}
+\pgfplotsset{compat=1.14}
+\KOMAoption{parskip}{half*}
+\attachfilesetup{color=blue}
+
+\AtBeginDocument{
+    \pagestyle{scrheadings}
+    %\automark[chapter]{chapter}  
+    \clearscrheadfoot
+    \ifoot[\thetitle, \theauthor, \thedate]{\thetitle, \theauthor, \thedate}
+    \ofoot[\pagemark/\pageref{LastPage}]{\pagemark/\pageref{LastPage}}
+    \ohead[]{\headmark}
+    
+    \hypersetup{
+        pdftitle={\thetitle},
+        pdfauthor={\theauthor}
+    }
+    
+    \date{\thedate}
+    \title{\thetitle}
+    \ifcsdef{thesubtitle}{\subtitle{\thesubtitle}}{}
+    \ifcsdef{thetitleauthor}{\author{\thetitleauthor}}{\author{\theauthor}}    
+}
